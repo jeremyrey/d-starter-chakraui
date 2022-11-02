@@ -8,9 +8,7 @@ export default function DynamicPage({ story }) {
   story = useStoryblokState(story, { customParent: 'http://localhost:3000'});
 
   return (
-    <>
-      <StoryblokComponent blok={story.content} />
-    </>
+    <StoryblokComponent blok={story.content} />
   );
 }
 

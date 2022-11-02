@@ -63,7 +63,6 @@ function MyApp({ Component, pageProps }) {
     )
   }, [])
 
-  console.log(theme)
   return (
     <ChakraProvider theme={theme}>
       <Fonts link={theme.font}/>
