@@ -36,7 +36,6 @@ export async function getStaticPaths() {
   };
   let { data } = await storyblokApi.get('cdn/stories', params);
 
-  console.log(data)
   const paths = data.stories.map((story) => ({
     params: { slug: story.slug },
   }));

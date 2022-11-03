@@ -55,20 +55,31 @@ async function getTheme() {
 function MyApp({ Component, pageProps }) {
 
   const [theme, setTheme] = useState({})
+  const [loaded, setLoaded] = useState(false)
 
   useEffect(() => {
     getTheme().then((value) => {
       setTheme(extendTheme(value))
+      setLoaded(true)
     }
     )
   }, [])
 
   return (
-    <ChakraProvider theme={theme}>
-      <Fonts link={theme.font}/>
-      <Component {...pageProps} />
-    </ChakraProvider>
+    <>
+    { loaded &&
+    (
+      <ChakraProvider theme={theme}>
+        <Fonts link={theme.font} />
+        <Component {...pageProps} />
+      </ChakraProvider>
+    )
+      
+    }
+    </>
   )
+    
+  
 }
 
 export default MyApp;
