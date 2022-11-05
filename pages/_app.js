@@ -1,8 +1,6 @@
 import { storyblokInit, apiPlugin } from "@storyblok/react";
-import Feature from "../components/Feature";
 import Flex from "../components/Flex";
 import Container from "../components/Container";
-import Grid from "../components/Grid";
 import Page from "../components/Page";
 import Box from "../components/Box";
 import Text from "../components/Text";
@@ -19,10 +17,8 @@ import Center from "../components/Center";
 import Fonts from "../components/Fonts";
 
 const components = {
-  feature: Feature,
   container: Container,
   flex: Flex,
-  grid: Grid,
   box: Box,
   text: Text,
   page: Page,

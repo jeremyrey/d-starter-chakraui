@@ -3,12 +3,25 @@ import {
   getStoryblokApi,
   StoryblokComponent,
 } from "@storyblok/react";
+import Meta from "../components/Meta";
 
 export default function DynamicPage({ story }) {
   story = useStoryblokState(story, { customParent: 'http://localhost:3000'});
+  console.log(story)
 
   return (
-    <StoryblokComponent blok={story.content} />
+    <>
+      <Meta 
+        title={story.content.title}
+        keywords={story.content.keywords}
+        description={story.content.description}
+        ogTitle={story.content.ogTitle}
+        ogType={story.content.ogType}
+        ogUrl={story.content.ogUrl}
+        ogImage={story.content.ogImage}
+      />
+      <StoryblokComponent blok={story.content} />
+    </>
   );
 }
 
