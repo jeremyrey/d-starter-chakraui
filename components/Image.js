@@ -3,7 +3,7 @@ import { storyblokEditable } from "@storyblok/react";
 
 const Image = ({ blok }) => {
   return (
-    <I src={blok.src.filename} alt={blok.description} />
+    <I src={blok.src.filename} alt={blok.alt} />
   );
 };
 
