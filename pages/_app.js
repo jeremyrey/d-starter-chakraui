@@ -15,6 +15,7 @@ import { extendTheme } from "@chakra-ui/react"
 import { useEffect, useState } from "react";
 import Center from "../components/Center";
 import Fonts from "../components/Fonts";
+import Head from 'next/head';
 
 const components = {
   container: Container,
@@ -45,17 +46,19 @@ async function getTheme() {
   const storyblokApi = getStoryblokApi();
   let { data } = await storyblokApi.get(`cdn/stories/${slug}`, params);
 
-  return JSON.parse(data.story.content.theme_config)
+  return data.story.content
 }
 
 function MyApp({ Component, pageProps }) {
 
-  const [theme, setTheme] = useState({})
+  const [themeConfig, setThemeConfig] = useState({})
+  const [favicon, setFavicon] = useState("data:,")
   const [loaded, setLoaded] = useState(false)
 
   useEffect(() => {
     getTheme().then((value) => {
-      setTheme(extendTheme(value))
+      setFavicon(value.favicon.filename)
+      setThemeConfig(extendTheme(JSON.parse(value.theme_config)))
       setLoaded(true)
     }
     )
@@ -63,19 +66,22 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
-    { loaded &&
-    (
-      <ChakraProvider theme={theme}>
-        <Fonts link={theme.font} />
-        <Component {...pageProps} />
-      </ChakraProvider>
-    )
-      
-    }
+      <Head>
+        <link rel="icon" type="image/png" href={favicon} />
+      </Head>
+      {loaded &&
+        (
+          <ChakraProvider theme={themeConfig}>
+            <Fonts link={themeConfig.font} />
+            <Component {...pageProps} />
+          </ChakraProvider>
+        )
+
+      }
     </>
   )
-    
-  
+
+
 }
 
 export default MyApp;

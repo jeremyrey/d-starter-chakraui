@@ -6,8 +6,7 @@ import {
 import Meta from "../components/Meta";
 
 export default function DynamicPage({ story }) {
-  story = useStoryblokState(story, { customParent: 'http://localhost:3000'});
-  console.log(story)
+  story = useStoryblokState(story);
 
   return (
     <>

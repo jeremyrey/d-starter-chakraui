@@ -11,7 +11,6 @@ const Meta = ({title, keywords, description, ogTitle, ogType, ogUrl, ogImage}) =
            <meta property="og:url" content={ogUrl} />
            <meta property="og:image" content={ogImage} />
            <meta charSet="utf-8"></meta>
-           <link rel="icon" href="/favicon.ico"></link>
            <title>{title}</title>
        </Head>
      );
