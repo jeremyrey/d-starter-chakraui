@@ -10,6 +10,7 @@ import HStack from "../components/HStack";
 import Button from "../components/Button";
 import Heading from "../components/Heading";
 import Center from "../components/Center";
+import DrawerBlock from "../components/DrawerBlock";
 
 const components = {
   container: Container,
@@ -22,11 +23,12 @@ const components = {
   hstack: HStack,
   button: Button,
   heading: Heading,
-  center: Center
+  center: Center,
+  drawerBlock: DrawerBlock
 };
 
 storyblokInit({
-  accessToken: "bqQwMVKsE6fFBmHiOhZ09Qtt",
+  accessToken: process.env.NEXT_PUBLIC_STORYBLOK_TOKEN,
   use: [apiPlugin],
   components,
 });
