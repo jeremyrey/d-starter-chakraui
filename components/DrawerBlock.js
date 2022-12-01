@@ -1,4 +1,8 @@
-import { storyblokEditable } from "@storyblok/react";
+import {
+  useStoryblokState,
+  getStoryblokApi,
+  StoryblokComponent,
+} from "@storyblok/react";
 import { Button, Drawer, DrawerOverlay, DrawerContent, DrawerCloseButton, DrawerHeader, DrawerBody, Input, DrawerFooter, useDisclosure, Box } from '@chakra-ui/react'
 import { useRef } from "react";
 
@@ -17,15 +21,14 @@ const DrawerBlock = ({ blok }) => {
     json_params = propsToJson(_props)
   }catch(e){}
   
-
   const { isOpen, onOpen, onClose } = useDisclosure()
   const btnRef = useRef()
 
   return (
     <Box {...json_params}>
-      <Button ref={btnRef} onClick={onOpen}>
-        Open
-      </Button>
+      <Box ref={btnRef} onClick={onOpen}>
+        <StoryblokComponent blok={blok.button[0]} />
+      </Box>
       <Drawer
         isOpen={isOpen}
         placement='top'
@@ -35,18 +38,11 @@ const DrawerBlock = ({ blok }) => {
         <DrawerOverlay />
         <DrawerContent>
           <DrawerCloseButton />
-          <DrawerHeader>Create your account</DrawerHeader>
 
           <DrawerBody>
-            <Input placeholder='Type here...' />
+            <StoryblokComponent blok={blok.menu[0]} />
           </DrawerBody>
 
-          <DrawerFooter>
-            <Button variant='outline' mr={3} onClick={onClose}>
-              Cancel
-            </Button>
-            <Button colorScheme='blue'>Save</Button>
-          </DrawerFooter>
         </DrawerContent>
       </Drawer>
     </Box>
