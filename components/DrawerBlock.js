@@ -1,9 +1,7 @@
 import {
-  useStoryblokState,
-  getStoryblokApi,
   StoryblokComponent,
 } from "@storyblok/react";
-import { Button, Drawer, DrawerOverlay, DrawerContent, DrawerCloseButton, DrawerHeader, DrawerBody, Input, DrawerFooter, useDisclosure, Box } from '@chakra-ui/react'
+import { Drawer, DrawerOverlay, DrawerContent, DrawerCloseButton, DrawerBody, useDisclosure, Box } from '@chakra-ui/react'
 import { useRef } from "react";
 
 function propsToJson(props) {

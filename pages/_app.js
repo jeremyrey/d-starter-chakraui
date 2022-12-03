@@ -11,6 +11,7 @@ import Button from "../components/Button";
 import Heading from "../components/Heading";
 import Center from "../components/Center";
 import DrawerBlock from "../components/DrawerBlock";
+import Icon from "../components/Icon";
 
 const components = {
   container: Container,
@@ -24,7 +25,8 @@ const components = {
   button: Button,
   heading: Heading,
   center: Center,
-  drawerBlock: DrawerBlock
+  drawerBlock: DrawerBlock,
+  icon: Icon
 };
 
 storyblokInit({
