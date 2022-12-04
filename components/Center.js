@@ -15,12 +15,12 @@ const Center = ({ blok }) => {
   try {
     json_params = propsToJson(_props)
   }catch(e){}
-
-  console.log(blok.content)
   
   return (
     <C {...storyblokEditable(blok)} key={blok._uid} {...json_params}>
-      <StoryblokComponent blok={blok.content[0]} key={blok.content[0]._uid} />
+      {
+       blok.content && <StoryblokComponent blok={blok.content[0]} key={blok.content[0]._uid} />
+       }
     </C>
   );
 };
