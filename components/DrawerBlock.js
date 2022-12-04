@@ -25,7 +25,7 @@ const DrawerBlock = ({ blok }) => {
   return (
     <Box {...json_params}>
       <Box ref={btnRef} onClick={onOpen}>
-        <StoryblokComponent blok={blok.button[0]} />
+        <StoryblokComponent blok={blok.button[0]} key={blok.button[0]._uid}/>
       </Box>
       <Drawer
         isOpen={isOpen}
@@ -38,7 +38,7 @@ const DrawerBlock = ({ blok }) => {
           <DrawerCloseButton />
 
           <DrawerBody>
-            <StoryblokComponent blok={blok.menu[0]} />
+            <StoryblokComponent blok={blok.menu[0]} key={blok.menu[0]._uid}/>
           </DrawerBody>
 
         </DrawerContent>
