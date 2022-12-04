@@ -7,6 +7,7 @@ import Text from "../components/Text";
 import Image from "../components/Image";
 import Link from "../components/Link";
 import HStack from "../components/HStack";
+import VStack from "../components/VStack";
 import Button from "../components/Button";
 import Heading from "../components/Heading";
 import Center from "../components/Center";
@@ -22,6 +23,7 @@ const components = {
   image: Image,
   link: Link,
   hstack: HStack,
+  vstack: VStack,
   button: Button,
   heading: Heading,
   center: Center,
