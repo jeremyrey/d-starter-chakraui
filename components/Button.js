@@ -18,7 +18,7 @@ const Button = ({ blok }) => {
   
   return (
     <B {...storyblokEditable(blok)} key={blok._uid} {...json_params}>
-      {blok.text}
+      {blok.content}
     </B>
   );
 };

@@ -8,7 +8,7 @@ function propsToJson(props) {
 const Link = ({ blok }) => {
   return (
     <L href={blok.link.cached_url} {...storyblokEditable(blok)} key={blok._uid}>
-      {blok.children.map((blok) => (
+      {blok.content.map((blok) => (
         <StoryblokComponent blok={blok} key={blok._uid} />
     ))}
     </L>

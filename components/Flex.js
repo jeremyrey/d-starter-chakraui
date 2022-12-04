@@ -18,7 +18,7 @@ const Flex = ({ blok }) => {
   
   return (
     <F {...storyblokEditable(blok)} key={blok._uid} {...json_params}>
-      {blok.children.map((blok) => (
+      {blok.content.map((blok) => (
         <StoryblokComponent blok={blok} key={blok._uid} />
     ))}
     </F>

@@ -18,7 +18,7 @@ const Container = ({ blok }) => {
 
   return (
     <C {...storyblokEditable(blok)} key={blok._uid} {...json_params} maxW="100%">
-      {blok.children.map((blok) => (
+      {blok.content.map((blok) => (
         <StoryblokComponent blok={blok} key={blok._uid} />
     ))}
     </C>

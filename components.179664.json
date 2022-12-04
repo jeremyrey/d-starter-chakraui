@@ -4,14 +4,11 @@
       "name": "box",
       "display_name": null,
       "created_at": "2022-10-20T14:01:18.389Z",
-      "updated_at": "2022-12-04T11:39:23.760Z",
+      "updated_at": "2022-12-04T12:28:56.608Z",
       "id": 3023794,
       "schema": {
         "props": {
           "type": "textarea"
-        },
-        "children": {
-          "type": "bloks"
         },
         "content": {
           "type": "bloks"
@@ -33,12 +30,9 @@
       "name": "button",
       "display_name": null,
       "created_at": "2022-10-22T13:54:06.798Z",
-      "updated_at": "2022-12-04T11:39:59.396Z",
+      "updated_at": "2022-12-04T14:30:59.564Z",
       "id": 3029643,
       "schema": {
-        "text": {
-          "type": "text"
-        },
         "props": {
           "type": "textarea"
         },
@@ -62,13 +56,9 @@
       "name": "center",
       "display_name": null,
       "created_at": "2022-10-21T12:30:08.001Z",
-      "updated_at": "2022-12-04T11:41:27.473Z",
+      "updated_at": "2022-12-04T14:31:05.603Z",
       "id": 3027169,
       "schema": {
-        "child": {
-          "type": "bloks",
-          "maximum": 1
-        },
         "props": {
           "type": "textarea"
         },
@@ -95,12 +85,9 @@
       "name": "container",
       "display_name": null,
       "created_at": "2022-10-21T12:32:28.554Z",
-      "updated_at": "2022-12-04T11:41:38.563Z",
+      "updated_at": "2022-12-04T14:31:10.419Z",
       "id": 3027175,
       "schema": {
-        "children": {
-          "type": "bloks"
-        },
         "props": {
           "type": "textarea"
         },
@@ -157,12 +144,9 @@
       "name": "flex",
       "display_name": null,
       "created_at": "2022-10-21T12:36:18.941Z",
-      "updated_at": "2022-12-04T11:42:32.815Z",
+      "updated_at": "2022-12-04T14:31:22.611Z",
       "id": 3027198,
       "schema": {
-        "children": {
-          "type": "bloks"
-        },
         "props": {
           "type": "textarea"
         },
@@ -186,12 +170,9 @@
       "name": "grid",
       "display_name": null,
       "created_at": "2022-10-19T22:16:30.802Z",
-      "updated_at": "2022-12-04T11:42:24.386Z",
+      "updated_at": "2022-12-04T14:31:27.323Z",
       "id": 3021675,
       "schema": {
-        "children": {
-          "type": "bloks"
-        },
         "props": {
           "type": "textarea"
         },
@@ -241,12 +222,9 @@
       "name": "hstack",
       "display_name": null,
       "created_at": "2022-10-21T12:55:56.331Z",
-      "updated_at": "2022-12-04T11:43:01.314Z",
+      "updated_at": "2022-12-04T14:31:42.722Z",
       "id": 3027224,
       "schema": {
-        "children": {
-          "type": "bloks"
-        },
         "props": {
           "type": "textarea"
         },
@@ -469,12 +447,9 @@
       "name": "vstack",
       "display_name": null,
       "created_at": "2022-10-21T12:53:20.917Z",
-      "updated_at": "2022-12-04T11:44:29.553Z",
+      "updated_at": "2022-12-04T14:32:03.103Z",
       "id": 3027218,
       "schema": {
-        "children": {
-          "type": "bloks"
-        },
         "props": {
           "type": "textarea"
         },
