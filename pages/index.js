@@ -7,7 +7,7 @@ import Meta from "../components/Meta";
 import { ChakraProvider, extendTheme } from '@chakra-ui/react'
 import Fonts from "../components/Fonts";
 
-export default function DynamicPage({ story, settings }) {
+export default function Index({ story, settings }) {
 
   if(!story || !settings)
     return (<></>)
@@ -34,7 +34,7 @@ export default function DynamicPage({ story, settings }) {
 
 export async function getStaticProps(context) {
   let params = {
-    by_slugs: context.params.slug + ',' + 'settings',
+    by_slugs: 'home,' + 'settings',
     version: 'draft'
   };
 
@@ -60,19 +60,4 @@ export async function getStaticProps(context) {
       settings: settings,
     },
   };
-}
-
-export async function getStaticPaths() {
-  const storyblokApi = getStoryblokApi();
-  let params = {
-    version: "draft",
-    excluding_slugs: "settings,home"
-  };
-  let { data } = await storyblokApi.get('cdn/stories', params);
-
-  const paths = data.stories.map((story) => ({
-    params: { slug: story.slug },
-  }));
-
-  return { paths, fallback: 'blocking' };
 }
