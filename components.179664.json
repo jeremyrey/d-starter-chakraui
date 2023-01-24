@@ -279,9 +279,7 @@
       "schema": {
         "src": {
           "type": "asset",
-          "filetypes": [
-            "images"
-          ],
+          "filetypes": ["images"],
           "allow_external_url": true
         },
         "props": {

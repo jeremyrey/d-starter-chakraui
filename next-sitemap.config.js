@@ -4,5 +4,4 @@ module.exports = {
   siteUrl: process.env.NEXT_PUBLIC_HOST || 'https://example.com',
   generateRobotsTxt: false, // (optional)
   // REST CODE READ DOCS  ...
-  }
-  
+}

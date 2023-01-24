@@ -1,7 +1,7 @@
 // next.config.js
 module.exports = {
   compiler: {
-    styledComponents: true
+    styledComponents: true,
   },
   async redirects() {
     return [
