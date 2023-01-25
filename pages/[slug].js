@@ -75,5 +75,5 @@ export async function getStaticPaths() {
     params: { slug: story.slug },
   }))
 
-  return { paths, fallback: 'blocking' }
+  return { paths, fallback: false }
 }
