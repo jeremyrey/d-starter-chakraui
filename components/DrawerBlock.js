@@ -9,26 +9,16 @@ import {
   Box,
 } from '@chakra-ui/react'
 import { useRef } from 'react'
-
-function propsToJson(props) {
-  return JSON.parse(props)
-}
+import PropsToJson from '../hooks/props_to_json'
 
 const DrawerBlock = ({ blok }) => {
-  let _props = '{}'
-  let json_params = {}
-
-  if (blok.props != '') _props = blok.props
-
-  try {
-    json_params = propsToJson(_props)
-  } catch (e) {}
+  let jsonParams = PropsToJson(blok.props)
 
   const { isOpen, onOpen, onClose } = useDisclosure()
   const btnRef = useRef()
 
   return (
-    <Box {...json_params}>
+    <Box {...jsonParams}>
       <Box ref={btnRef} onClick={onOpen}>
         <StoryblokComponent blok={blok.button[0]} key={blok.button[0]._uid} />
       </Box>

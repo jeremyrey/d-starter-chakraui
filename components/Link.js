@@ -1,9 +1,6 @@
 import { storyblokEditable, StoryblokComponent } from '@storyblok/react'
 import { Link as L } from '@chakra-ui/react'
-
-function propsToJson(props) {
-  return JSON.parse(props)
-}
+import PropsToJson from '../hooks/props_to_json'
 
 const Link = ({ blok }) => {
   return (

@@ -1,22 +1,12 @@
 import { Text as T } from '@chakra-ui/react'
 import { storyblokEditable } from '@storyblok/react'
-
-function propsToJson(props) {
-  return JSON.parse(props)
-}
+import PropsToJson from '../hooks/props_to_json'
 
 const Text = ({ blok }) => {
-  let _props = '{}'
-  let json_params = {}
-
-  if (blok.props != '') _props = blok.props
-
-  try {
-    json_params = propsToJson(_props)
-  } catch (e) {}
+  let jsonParams = PropsToJson(blok.props)
 
   return (
-    <T {...storyblokEditable(blok)} key={blok._uid} {...json_params}>
+    <T {...storyblokEditable(blok)} key={blok._uid} {...jsonParams}>
       {blok.content}
     </T>
   )
