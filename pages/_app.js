@@ -13,7 +13,7 @@ import Heading from '../components/Heading'
 import Center from '../components/Center'
 import DrawerBlock from '../components/DrawerBlock'
 import Icon from '../components/Icon'
-import GoogleMaps from '../components/GoogleMaps'
+import Maps from '../components/Maps'
 
 const components = {
   container: Container,
@@ -30,7 +30,7 @@ const components = {
   center: Center,
   drawerBlock: DrawerBlock,
   icon: Icon,
-  googleMaps: GoogleMaps,
+  googleMaps: Maps,
 }
 
 storyblokInit({
