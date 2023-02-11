@@ -1,9 +1,9 @@
 import { StoryblokComponent, storyblokEditable } from '@storyblok/react'
 import { HStack as H } from '@chakra-ui/react'
-import PropsToJson from '../hooks/props_to_json'
+import propsToJson from '../hooks/propsToJson'
 
 const HStack = ({ blok }) => {
-  let jsonParams = PropsToJson(blok.props)
+  let jsonParams = propsToJson(blok.props)
 
   return (
     <H {...storyblokEditable(blok)} key={blok._uid} {...jsonParams}>

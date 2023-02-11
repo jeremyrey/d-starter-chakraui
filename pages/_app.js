@@ -14,6 +14,7 @@ import Center from '../components/Center'
 import DrawerBlock from '../components/DrawerBlock'
 import Icon from '../components/Icon'
 import Maps from '../components/Maps'
+import Tabs from '../components/Tabs'
 
 const components = {
   container: Container,
@@ -31,6 +32,7 @@ const components = {
   drawerBlock: DrawerBlock,
   icon: Icon,
   googleMaps: Maps,
+  tabs: Tabs,
 }
 
 storyblokInit({

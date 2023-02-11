@@ -1,9 +1,9 @@
 import { Image as I } from '@chakra-ui/react'
 import { storyblokEditable } from '@storyblok/react'
-import PropsToJson from '../hooks/props_to_json'
+import propsToJson from '../hooks/propsToJson'
 
 const Image = ({ blok }) => {
-  let jsonParams = PropsToJson(blok.props)
+  let jsonParams = propsToJson(blok.props)
 
   return (
     <I

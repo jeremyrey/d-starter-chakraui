@@ -1,9 +1,9 @@
 import { StoryblokComponent, storyblokEditable } from '@storyblok/react'
 import { Box as B } from '@chakra-ui/react'
-import PropsToJson from '../hooks/props_to_json'
+import propsToJson from '../hooks/propsToJson'
 
 const Box = ({ blok }) => {
-  let jsonParams = PropsToJson(blok.props)
+  let jsonParams = propsToJson(blok.props)
 
   return (
     <B {...storyblokEditable(blok)} key={blok._uid} {...jsonParams}>

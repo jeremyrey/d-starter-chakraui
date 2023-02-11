@@ -1,9 +1,9 @@
 import { StoryblokComponent, storyblokEditable } from '@storyblok/react'
 import { Flex as F } from '@chakra-ui/react'
-import PropsToJson from '../hooks/props_to_json'
+import propsToJson from '../hooks/propsToJson'
 
 const Flex = ({ blok }) => {
-  let jsonParams = PropsToJson(blok.props)
+  let jsonParams = propsToJson(blok.props)
 
   return (
     <F {...storyblokEditable(blok)} key={blok._uid} {...jsonParams}>
