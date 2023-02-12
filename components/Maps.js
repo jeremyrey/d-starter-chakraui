@@ -1,7 +1,7 @@
 import { storyblokEditable } from '@storyblok/react'
 import { Box as B } from '@chakra-ui/react'
 import { useMemo } from 'react'
-import { useLoadScript, GoogleMap } from '@react-google-maps/api'
+import { useLoadScript, GoogleMap, Marker } from '@react-google-maps/api'
 import propsToJson from '../hooks/propsToJson'
 import mapStyles from '../mapStyles.json'
 
@@ -49,7 +49,14 @@ const Maps = ({ blok }) => {
           width: jsonParams.width ?? DEFAULT_WIDTH,
           height: jsonParams.height ?? DEFAULT_HEIGHT,
         }}
-      />
+      >
+        {jsonParams.markers.map((marker) => (
+          <Marker
+            key={marker.id}
+            position={{ lat: marker.lat, lng: marker.lng }}
+          />
+        ))}
+      </GoogleMap>
     </B>
   )
 }
