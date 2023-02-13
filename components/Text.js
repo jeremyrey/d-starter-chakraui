@@ -5,9 +5,8 @@ import { render } from 'storyblok-rich-text-react-renderer'
 
 const Text = ({ blok }) => {
   let jsonParams = propsToJson(blok.props)
-  console.log(blok.content)
 
-  return <div>{render(document)}</div>
+  return <div>{render(blok.content)}</div>
 }
 
 export default Text
