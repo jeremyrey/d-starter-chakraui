@@ -13,7 +13,7 @@ const Tabs = ({ blok }) => {
   let jsonParams = propsToJson(blok.props)
 
   return (
-    <T {...storyblokEditable(blok)} key={blok._uid} {...jsonParams.root}>
+    <T {...storyblokEditable(blok)} {...jsonParams.root}>
       <TabList {...jsonParams.navs}>
         {blok.navs.map((navItem) => (
           <Tab key={'nav' + navItem._uid} {...jsonParams.navItems}>

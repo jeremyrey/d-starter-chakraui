@@ -167,6 +167,29 @@
       "icon": null
     },
     {
+      "name": "googleMaps",
+      "display_name": null,
+      "created_at": "2023-02-10T15:29:02.603Z",
+      "updated_at": "2023-02-10T15:29:30.749Z",
+      "id": 3425192,
+      "schema": {
+        "props": {
+          "type": "textarea"
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "googleMaps",
+      "component_group_uuid": null,
+      "color": null,
+      "icon": null
+    },
+    {
       "name": "grid",
       "display_name": null,
       "created_at": "2022-10-19T22:16:30.802Z",
@@ -279,7 +302,9 @@
       "schema": {
         "src": {
           "type": "asset",
-          "filetypes": ["images"],
+          "filetypes": [
+            "images"
+          ],
           "allow_external_url": true
         },
         "props": {
@@ -416,17 +441,66 @@
       "icon": null
     },
     {
-      "name": "text",
+      "name": "tabs",
       "display_name": null,
-      "created_at": "2022-10-20T14:11:04.522Z",
-      "updated_at": "2022-10-20T14:29:25.784Z",
-      "id": 3023864,
+      "created_at": "2023-02-10T17:48:44.919Z",
+      "updated_at": "2023-02-11T10:22:14.881Z",
+      "id": 3425717,
       "schema": {
-        "content": {
-          "type": "text"
+        "navs": {
+          "type": "bloks",
+          "required": true,
+          "minimum": 1,
+          "tooltip": false
+        },
+        "panels": {
+          "type": "bloks",
+          "required": true,
+          "minimum": 1
         },
         "props": {
           "type": "textarea"
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "tabs",
+      "component_group_uuid": null,
+      "color": null,
+      "icon": null
+    },
+    {
+      "name": "text",
+      "display_name": null,
+      "created_at": "2022-10-20T14:11:04.522Z",
+      "updated_at": "2023-02-13T14:35:22.733Z",
+      "id": 3023864,
+      "schema": {
+        "props": {
+          "type": "textarea",
+          "key": "props",
+          "pos": 0
+        },
+        "content": {
+          "type": "richtext",
+          "customize_toolbar": true,
+          "toolbar": [
+            "bold",
+            "italic",
+            "strike",
+            "underline",
+            "paragraph",
+            "list",
+            "olist",
+            "link"
+          ],
+          "key": "content_n",
+          "pos": 1
         }
       },
       "image": null,

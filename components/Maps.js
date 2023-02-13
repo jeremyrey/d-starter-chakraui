@@ -9,10 +9,10 @@ const DEFAULT_WIDTH = '100%'
 const DEFAULT_HEIGHT = '400px'
 const DEFAULT_ZOOM = 14
 const DEFAULT_API_KEY = 'AIzaSyDrZpqsORodNMj4gikLaF-mdH3uxojCOWE'
+const LIBRAIRIES = []
 
 const Maps = ({ blok }) => {
   const jsonParams = propsToJson(blok.props)
-  const libraries = useMemo(() => [], [])
   const mapCenter = useMemo(
     () => ({ lat: jsonParams.lat, lng: jsonParams.lng }),
     [jsonParams.lat, jsonParams.lng]
@@ -20,7 +20,7 @@ const Maps = ({ blok }) => {
 
   const { isLoaded } = useLoadScript({
     googleMapsApiKey: jsonParams.api_key ?? DEFAULT_API_KEY,
-    libraries: libraries,
+    libraries: LIBRAIRIES,
   })
 
   const mapOptions = useMemo(
