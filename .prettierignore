@@ -3,6 +3,7 @@ build
 coverage
 .vscode
 .next
+out
 
 # Ignore all HTML files:
 *.html
