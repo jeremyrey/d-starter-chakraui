@@ -5,12 +5,9 @@ import { render } from 'storyblok-rich-text-react-renderer'
 
 const Text = ({ blok }) => {
   let jsonParams = propsToJson(blok.props)
+  console.log(blok.content)
 
-  return (
-    <T {...storyblokEditable(blok)} key={blok._uid} {...jsonParams} as="div">
-      {render(blok.content)}
-    </T>
-  )
+  return <div>{render(document)}</div>
 }
 
 export default Text
