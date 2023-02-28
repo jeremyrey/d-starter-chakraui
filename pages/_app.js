@@ -15,6 +15,9 @@ import DrawerBlock from '../components/DrawerBlock'
 import Icon from '../components/Icon'
 import Maps from '../components/Maps'
 import Tabs from '../components/Tabs'
+import Form from '../components/Form'
+import Input from '../components/Input'
+import TextArea from '../components/Textarea'
 
 const components = {
   container: Container,
@@ -33,6 +36,9 @@ const components = {
   icon: Icon,
   googleMaps: Maps,
   tabs: Tabs,
+  form: Form,
+  input: Input,
+  textarea: TextArea
 }
 
 storyblokInit({
