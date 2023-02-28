@@ -17,7 +17,7 @@ import Maps from '../components/Maps'
 import Tabs from '../components/Tabs'
 import Form from '../components/Form'
 import Input from '../components/Input'
-import TextArea from '../components/Textarea'
+import Textarea from '../components/Textarea'
 
 const components = {
   container: Container,
@@ -38,7 +38,7 @@ const components = {
   tabs: Tabs,
   form: Form,
   input: Input,
-  textarea: TextArea
+  textarea: Textarea,
 }
 
 storyblokInit({
