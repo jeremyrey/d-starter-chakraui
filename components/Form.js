@@ -20,6 +20,8 @@ const Form = ({ blok }) => {
       message += jsonParams.name_text + ' : ' + inputs[i][1].value + '\n'
     })
 
+    console.log(message)
+
     const res = await fetch('/api/sendgrid', {
       body: JSON.stringify({
         email: 'jeremyrey@aplusc.fr',
