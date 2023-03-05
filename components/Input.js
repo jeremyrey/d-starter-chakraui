@@ -6,7 +6,12 @@ const Input = ({ blok }) => {
   let jsonParams = propsToJson(blok.props)
 
   return (
-    <I {...storyblokEditable(blok)} key={blok._uid} {...jsonParams} />
+    <>
+      <label for={jsonParams.name} style={{ display: 'none' }}>
+        {jsonParams.name_text}
+      </label>
+      <I {...storyblokEditable(blok)} key={blok._uid} {...jsonParams} />
+    </>
   )
 }
 

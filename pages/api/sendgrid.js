@@ -12,7 +12,7 @@ async function sendEmail(req, res) {
   const mailData = {
     from: 'jeremyrey@aplusc.fr',
     to: 'famillelosreyes@gmail.com',
-    subject: `Message From ${req.body.subject}`,
+    subject: req.body.subject,
     text: req.body.message,
     html: `<div>${req.body.message}</div>`,
   }

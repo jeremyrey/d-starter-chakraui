@@ -5,7 +5,14 @@ import propsToJson from '../hooks/propsToJson'
 const Textarea = ({ blok }) => {
   let jsonParams = propsToJson(blok.props)
 
-  return <T {...storyblokEditable(blok)} key={blok._uid} {...jsonParams} />
+  return (
+    <>
+      <label for={jsonParams.name} style={{ display: 'none' }}>
+        {jsonParams.name_text}
+      </label>
+      <T {...storyblokEditable(blok)} key={blok._uid} {...jsonParams} />
+    </>
+  )
 }
 
 export default Textarea

@@ -167,6 +167,32 @@
       "icon": null
     },
     {
+      "name": "form",
+      "display_name": null,
+      "created_at": "2023-02-27T15:27:49.292Z",
+      "updated_at": "2023-02-27T15:28:17.969Z",
+      "id": 3498762,
+      "schema": {
+        "props": {
+          "type": "textarea"
+        },
+        "content": {
+          "type": "bloks"
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "form",
+      "component_group_uuid": null,
+      "color": null,
+      "icon": null
+    },
+    {
       "name": "googleMaps",
       "display_name": null,
       "created_at": "2023-02-10T15:29:02.603Z",
@@ -271,7 +297,7 @@
       "name": "icon",
       "display_name": null,
       "created_at": "2022-12-03T11:11:46.582Z",
-      "updated_at": "2022-12-03T11:12:21.594Z",
+      "updated_at": "2023-02-15T10:04:13.176Z",
       "id": 3190630,
       "schema": {
         "name": {
@@ -279,6 +305,9 @@
         },
         "provider": {
           "type": "text"
+        },
+        "props": {
+          "type": "textarea"
         }
       },
       "image": null,
@@ -302,7 +331,9 @@
       "schema": {
         "src": {
           "type": "asset",
-          "filetypes": ["images"],
+          "filetypes": [
+            "images"
+          ],
           "allow_external_url": true
         },
         "props": {
@@ -331,20 +362,37 @@
       "icon": null
     },
     {
+      "name": "input",
+      "display_name": null,
+      "created_at": "2023-02-27T15:43:35.793Z",
+      "updated_at": "2023-02-27T15:44:03.184Z",
+      "id": 3498927,
+      "schema": {
+        "props": {
+          "type": "textarea"
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "input",
+      "component_group_uuid": null,
+      "color": null,
+      "icon": null
+    },
+    {
       "name": "link",
       "display_name": null,
       "created_at": "2022-10-20T12:56:12.698Z",
-      "updated_at": "2022-12-04T11:43:36.516Z",
+      "updated_at": "2023-02-17T18:15:15.136Z",
       "id": 3023387,
       "schema": {
         "link": {
           "type": "multilink"
-        },
-        "children": {
-          "type": "bloks"
-        },
-        "props": {
-          "type": "textarea"
         },
         "content": {
           "type": "bloks"
@@ -413,7 +461,7 @@
       "name": "settings",
       "display_name": null,
       "created_at": "2022-10-24T10:34:43.847Z",
-      "updated_at": "2022-12-04T11:44:16.164Z",
+      "updated_at": "2023-02-13T16:51:47.824Z",
       "id": 3033035,
       "schema": {
         "theme_config": {
@@ -421,9 +469,6 @@
         },
         "favicon": {
           "type": "asset"
-        },
-        "dns": {
-          "type": "text"
         }
       },
       "image": null,
@@ -509,6 +554,29 @@
       "all_presets": [],
       "preset_id": null,
       "real_name": "text",
+      "component_group_uuid": null,
+      "color": null,
+      "icon": null
+    },
+    {
+      "name": "textarea",
+      "display_name": null,
+      "created_at": "2023-02-27T15:44:10.751Z",
+      "updated_at": "2023-02-27T15:44:18.475Z",
+      "id": 3498933,
+      "schema": {
+        "props": {
+          "type": "textarea"
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "textarea",
       "component_group_uuid": null,
       "color": null,
       "icon": null

@@ -1,5 +1,5 @@
 import { StoryblokComponent, storyblokEditable } from '@storyblok/react'
-import { Box as B } from '@chakra-ui/react'
+import { Box } from '@chakra-ui/react'
 import propsToJson from '../hooks/propsToJson'
 
 const Form = ({ blok }) => {
@@ -15,12 +15,10 @@ const Form = ({ blok }) => {
     const inputs = Object.entries(e.target)
 
     let message = 'Bonjour, \nVoici les détails du message : \n\n'
-    blok_inputs.forEach(function (value, i) {
+    blok_inputs.forEach(function (_value, i) {
       const jsonParams = propsToJson(blok_inputs[i].props)
       message += jsonParams.name_text + ' : ' + inputs[i][1].value + '\n'
     })
-
-    console.log(message)
 
     const res = await fetch('/api/sendgrid', {
       body: JSON.stringify({
@@ -37,19 +35,18 @@ const Form = ({ blok }) => {
 
     const { error } = await res.json()
     if (error) {
-      console.log(error)
       return
     }
   }
 
   return (
-    <B {...storyblokEditable(blok)} key={blok._uid} {...jsonParams}>
+    <Box {...storyblokEditable(blok)} key={blok._uid} {...jsonParams}>
       <form onSubmit={handleSubmit}>
         {blok.content.map((blok) => (
           <StoryblokComponent blok={blok} key={blok._uid} />
         ))}
       </form>
-    </B>
+    </Box>
   )
 }
 
