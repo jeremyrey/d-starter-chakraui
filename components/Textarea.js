@@ -10,7 +10,12 @@ const Textarea = ({ blok }) => {
       <label for={jsonParams.name} style={{ display: 'none' }}>
         {jsonParams.name_text}
       </label>
-      <T {...storyblokEditable(blok)} key={blok._uid} {...jsonParams} />
+      <T
+        {...storyblokEditable(blok)}
+        key={blok._uid}
+        {...jsonParams}
+        id={jsonParams.name}
+      />
     </>
   )
 }
