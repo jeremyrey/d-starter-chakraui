@@ -7,9 +7,6 @@ const Textarea = ({ blok }) => {
 
   return (
     <>
-      <label for={jsonParams.name} style={{ display: 'none' }}>
-        {jsonParams.name_text}
-      </label>
       <T
         {...storyblokEditable(blok)}
         key={blok._uid}
