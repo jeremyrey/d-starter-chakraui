@@ -7,9 +7,7 @@ const Input = ({ blok }) => {
 
   return (
     <>
-      <label for={jsonParams.name} style={{ display: 'none' }}>
-        {jsonParams.name_text}
-      </label>
+      <label for={jsonParams.name}>{jsonParams.name_text}</label>
       <I
         {...storyblokEditable(blok)}
         key={blok._uid}
