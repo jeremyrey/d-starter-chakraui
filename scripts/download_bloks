@@ -1,4 +1,4 @@
 #!/bin/bash
 echo "Début du téléchargement"
-storyblok pull-components --space 179664
+storyblok pull-components --space 201927
 echo "Fin du téléchargement"
