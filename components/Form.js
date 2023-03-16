@@ -2,29 +2,45 @@ import { StoryblokComponent, storyblokEditable } from '@storyblok/react'
 import { Box } from '@chakra-ui/react'
 import propsToJson from '../hooks/propsToJson'
 
+const blok_inputs = []
+
+const loopContent = (value) => {
+  if (value.content && value.content.length > 0) {
+    value.content.forEach(function (value, i) {
+      loopContent(value)
+    })
+  } else {
+    if (value.component === 'input' || value.component === 'textarea') {
+      blok_inputs.push(value)
+    }
+  }
+}
+
 const Form = ({ blok }) => {
   let jsonParams = propsToJson(blok.props)
+  let isLoading = false
 
   const handleSubmit = async (e) => {
     e.preventDefault()
 
-    const blok_inputs = blok.content.filter(
-      (component) =>
-        component.component === 'input' || component.component === 'textarea'
-    )
+    isLoading = true
+
+    blok.content.forEach(function (value, i) {
+      loopContent(value)
+    })
+
     const inputs = Object.entries(e.target)
 
-    let message = 'Bonjour, \nVoici les détails du message : \n\n'
+    let message = 'Bonjour, <br>Voici les détails du message : <br><br>'
     blok_inputs.forEach(function (_value, i) {
       const jsonParams = propsToJson(blok_inputs[i].props)
-      message += jsonParams.name_text + ' : ' + inputs[i][1].value + '\n'
+      message += jsonParams.name_text + ' : ' + inputs[i][1].value + '<br>'
     })
 
     const res = await fetch('/api/sendgrid', {
       body: JSON.stringify({
-        email: 'jeremyrey@aplusc.fr',
-        fullname: 'Jérémy',
-        subject: 'Nouveau message',
+        email: blok.contact,
+        subject: 'Nouveau message depuis votre site',
         message: message,
       }),
       headers: {
