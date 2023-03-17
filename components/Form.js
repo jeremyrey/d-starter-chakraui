@@ -1,6 +1,7 @@
 import { StoryblokComponent, storyblokEditable } from '@storyblok/react'
-import { Box } from '@chakra-ui/react'
+import { Box, Center } from '@chakra-ui/react'
 import propsToJson from '../hooks/propsToJson'
+import React, { useState } from 'react'
 
 const blok_inputs = []
 
@@ -18,12 +19,17 @@ const loopContent = (value) => {
 
 const Form = ({ blok }) => {
   let jsonParams = propsToJson(blok.props)
-  let isLoading = false
+  const [isLoading, setIsLoading] = useState(false)
+  const [isSent, setIsSent] = useState(false)
 
   const handleSubmit = async (e) => {
     e.preventDefault()
 
-    isLoading = true
+    console.log(isLoading)
+
+    setIsLoading(true)
+
+    console.log(isLoading)
 
     blok.content.forEach(function (value, i) {
       loopContent(value)
@@ -56,7 +62,25 @@ const Form = ({ blok }) => {
   }
 
   return (
-    <Box {...storyblokEditable(blok)} key={blok._uid} {...jsonParams}>
+    <Box
+      {...storyblokEditable(blok)}
+      key={blok._uid}
+      {...jsonParams}
+      position="relative"
+    >
+      {isLoading && (
+        <Center
+          position="absolute"
+          top="0"
+          left="0"
+          w="100%"
+          h="100%"
+          bg="hsl(0deg 0% 100% / 90%)"
+          zIndex="2"
+        >
+          Votre message est envoyé
+        </Center>
+      )}
       <form onSubmit={handleSubmit}>
         {blok.content.map((blok) => (
           <StoryblokComponent blok={blok} key={blok._uid} />
