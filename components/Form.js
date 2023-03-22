@@ -1,53 +1,45 @@
 import { StoryblokComponent, storyblokEditable } from '@storyblok/react'
 import { Box, Center } from '@chakra-ui/react'
 import propsToJson from '../hooks/propsToJson'
+import { useFileInputFormatting } from '../hooks/useFileInputFormatting.hook'
 import React, { useState } from 'react'
-
-const blok_inputs = []
-
-const loopContent = (value) => {
-  if (value.content && value.content.length > 0) {
-    value.content.forEach(function (value, i) {
-      loopContent(value)
-    })
-  } else {
-    if (value.component === 'input' || value.component === 'textarea') {
-      blok_inputs.push(value)
-    }
-  }
-}
+import { useExtractInputsFormBloks } from '../hooks/useExtractInputsFromBloks.hook'
 
 const Form = ({ blok }) => {
   let jsonParams = propsToJson(blok.props)
   const [isLoading, setIsLoading] = useState(false)
   const [isSent, setIsSent] = useState(false)
 
+  //const submit = useSendContactForm(e, setIsLoading)
+
   const handleSubmit = async (e) => {
     e.preventDefault()
 
-    console.log(isLoading)
+    //setIsLoading(true)
 
-    setIsLoading(true)
-
-    console.log(isLoading)
-
-    blok.content.forEach(function (value, i) {
-      loopContent(value)
-    })
-
+    const blok_inputs = useExtractInputsFormBloks(blok.content)
     const inputs = Object.entries(e.target)
 
     let message = 'Bonjour, <br>Voici les détails du message : <br><br>'
+    let file
+    let fileInfo = {}
     blok_inputs.forEach(function (_value, i) {
       const jsonParams = propsToJson(blok_inputs[i].props)
-      message += jsonParams.name_text + ' : ' + inputs[i][1].value + '<br>'
+      if (inputs[i][1].type == 'file') {
+        file = inputs[i][1].files[0]
+      } else {
+        message += jsonParams.name_text + ' : ' + inputs[i][1].value + '<br>'
+      }
     })
-
+    if (file) {
+      fileInfo = await useFileInputFormatting(file)
+    }
     const res = await fetch('/api/sendgrid', {
       body: JSON.stringify({
         email: blok.contact,
         subject: 'Nouveau message depuis votre site',
         message: message,
+        ...fileInfo,
       }),
       headers: {
         'Content-Type': 'application/json',
