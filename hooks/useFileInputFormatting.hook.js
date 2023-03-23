@@ -7,7 +7,7 @@ async function getBase64(file) {
   })
 }
 
-export const useFileInputFormatting = async (file) => {
+export const UseFileInputFormatting = async (file) => {
   let innerFile = ''
   await getBase64(file).then((data) => (innerFile = data))
   const filename = file.name
