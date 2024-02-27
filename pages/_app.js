@@ -18,6 +18,7 @@ import Tabs from '../components/Tabs'
 import Form from '../components/Form'
 import Input from '../components/Input'
 import Textarea from '../components/Textarea'
+import Video from '../components/Video'
 
 const components = {
   container: Container,
@@ -39,6 +40,7 @@ const components = {
   form: Form,
   input: Input,
   textarea: Textarea,
+  video: Video,
 }
 
 storyblokInit({
