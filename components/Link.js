@@ -3,7 +3,7 @@ import { Link as L } from '@chakra-ui/react'
 import propsToJson from '../hooks/propsToJson'
 
 const Link = ({ blok }) => {
-  let jsonParams = propsToJson(blok.props)
+  const jsonParams = propsToJson(blok.props)
   return (
     <L
       href={blok.link.cached_url}

@@ -6,7 +6,7 @@ import React, { useState } from 'react'
 import { useExtractInputsFormBloks } from '../hooks/useExtractInputsFromBloks.hook'
 
 const Form = ({ blok }) => {
-  let jsonParams = propsToJson(blok.props)
+  const jsonParams = propsToJson(blok.props)
   const [isLoading, setIsLoading] = useState(false)
 
   const blok_inputs = useExtractInputsFormBloks(blok.content)

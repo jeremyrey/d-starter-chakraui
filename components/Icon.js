@@ -59,7 +59,7 @@ const MAPPING = {
 }
 
 const Icon = ({ blok }) => {
-  let jsonParams = propsToJson(blok.props)
+  const jsonParams = propsToJson(blok.props)
 
   return React.createElement(MAPPING[blok.name], { ...jsonParams })
 }

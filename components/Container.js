@@ -3,7 +3,7 @@ import { Container as C } from '@chakra-ui/react'
 import propsToJson from '../hooks/propsToJson'
 
 const Container = ({ blok }) => {
-  let jsonParams = propsToJson(blok.props)
+  const jsonParams = propsToJson(blok.props)
 
   return (
     <C {...storyblokEditable(blok)} key={blok._uid} {...jsonParams} maxW="100%">

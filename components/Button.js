@@ -3,7 +3,7 @@ import { Button as B } from '@chakra-ui/react'
 import propsToJson from '../hooks/propsToJson'
 
 const Button = ({ blok }) => {
-  let jsonParams = propsToJson(blok.props)
+  const jsonParams = propsToJson(blok.props)
 
   return (
     <B {...storyblokEditable(blok)} key={blok._uid} {...jsonParams}>

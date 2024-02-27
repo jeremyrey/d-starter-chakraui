@@ -12,7 +12,7 @@ import { useRef } from 'react'
 import propsToJson from '../hooks/propsToJson'
 
 const DrawerBlock = ({ blok }) => {
-  let jsonParams = propsToJson(blok.props)
+  const jsonParams = propsToJson(blok.props)
 
   const { isOpen, onOpen, onClose } = useDisclosure()
   const btnRef = useRef()

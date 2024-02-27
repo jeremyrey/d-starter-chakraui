@@ -3,7 +3,7 @@ import { Center as C } from '@chakra-ui/react'
 import propsToJson from '../hooks/propsToJson'
 
 const Center = ({ blok }) => {
-  let jsonParams = propsToJson(blok.props)
+  const jsonParams = propsToJson(blok.props)
 
   return (
     <C {...storyblokEditable(blok)} key={blok._uid} {...jsonParams}>

@@ -10,7 +10,7 @@ import {
 import propsToJson from '../hooks/propsToJson'
 
 const Tabs = ({ blok }) => {
-  let jsonParams = propsToJson(blok.props)
+  const jsonParams = propsToJson(blok.props)
 
   return (
     <T {...storyblokEditable(blok)} {...jsonParams.root}>
