@@ -1,4 +1,4 @@
 #!/bin/bash
 echo "Début de la mise à jour"
-storyblok push-components --space $1 components.179664.json
+storyblok push-components --space $1 components.201927.json
 echo "Fin de la mise à jour"
