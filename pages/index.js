@@ -6,6 +6,7 @@ import {
 import Meta from '../components/Meta'
 import { ChakraProvider, extendTheme } from '@chakra-ui/react'
 import Fonts from '../components/Fonts'
+import CookieConsent from '../components/CookieConsent'
 
 export default function Index({ story, settings }) {
   story = useStoryblokState(story, {
@@ -29,6 +30,7 @@ export default function Index({ story, settings }) {
         favicon={settings.content.favicon.filename}
       />
       <StoryblokComponent blok={story.content} />
+      <CookieConsent />
     </ChakraProvider>
   )
 }

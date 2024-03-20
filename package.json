@@ -20,6 +20,7 @@
     "@sendgrid/mail": "^7.7.0",
     "@storyblok/react": "^1.0.8",
     "@typescript-eslint/eslint-plugin": "^5.49.0",
+    "cookies-next": "^4.1.1",
     "eslint-config-next": "^13.0.6",
     "framer-motion": "^7.6.1",
     "next": "^13.0.6",
