@@ -19,6 +19,7 @@ import Form from '../components/Form'
 import Input from '../components/Input'
 import Textarea from '../components/Textarea'
 import Video from '../components/Video'
+import Carousel from '../components/Carousel'
 
 const components = {
   container: Container,
@@ -41,6 +42,7 @@ const components = {
   input: Input,
   textarea: Textarea,
   video: Video,
+  carousel: Carousel,
 }
 
 storyblokInit({
