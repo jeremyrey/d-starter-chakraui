@@ -7,6 +7,7 @@ import Meta from '../components/Meta'
 import { ChakraProvider, extendTheme } from '@chakra-ui/react'
 import Fonts from '../components/Fonts'
 import CookieConsent from '../components/CookieConsent'
+import Script from 'next/script'
 
 export default function DynamicPage({ story, settings }) {
   story = useStoryblokState(story, {
@@ -31,6 +32,16 @@ export default function DynamicPage({ story, settings }) {
       />
       <StoryblokComponent blok={story.content} />
       <CookieConsent />
+      <Script strategy="lazyOnload" id="GA">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}',{
+          page_path: window.location.pathname,
+          });
+         `}
+      </Script>
     </ChakraProvider>
   )
 }
