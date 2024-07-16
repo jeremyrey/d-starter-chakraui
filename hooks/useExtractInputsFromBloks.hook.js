@@ -4,7 +4,11 @@ const loopContent = (blok_inputs, value) => {
       loopContent(blok_inputs, value)
     })
   } else {
-    if (value.component === 'input' || value.component === 'textarea') {
+    if (
+      value.component === 'input' ||
+      value.component === 'textarea' ||
+      value.component === 'select'
+    ) {
       blok_inputs.push(value)
     }
   }

@@ -20,6 +20,7 @@ import Input from '../components/Input'
 import Textarea from '../components/Textarea'
 import Video from '../components/Video'
 import Carousel from '../components/Carousel'
+import Select from '../components/Select'
 
 const components = {
   container: Container,
@@ -43,6 +44,7 @@ const components = {
   textarea: Textarea,
   video: Video,
   carousel: Carousel,
+  select: Select,
 }
 
 storyblokInit({
