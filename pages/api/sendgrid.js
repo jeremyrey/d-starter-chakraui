@@ -1,6 +1,6 @@
-import sendgrid from '@sendgrid/mail'
+import { Resend } from 'resend'
 
-sendgrid.setApiKey(process.env.SENDGRID_API_KEY)
+const resend = new Resend(process.env.RESEND_API_TOKEN)
 
 async function sendEmail(req, res) {
   try {
@@ -15,7 +15,7 @@ async function sendEmail(req, res) {
         },
       ]
     }
-    await sendgrid.send({
+    await resend.emails.send({
       to: req.body.email, // Your email where you'll receive emails
       from: 'go@d-starter.fr', // your website email address here
       subject: `${req.body.subject}`,

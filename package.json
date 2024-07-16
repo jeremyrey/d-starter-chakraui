@@ -28,6 +28,7 @@
     "nodemailer": "^6.9.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "resend": "^3.4.0",
     "storyblok-rich-text-react-renderer": "^2.6.1"
   },
   "devDependencies": {
