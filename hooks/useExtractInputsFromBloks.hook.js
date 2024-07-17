@@ -7,7 +7,8 @@ const loopContent = (blok_inputs, value) => {
     if (
       value.component === 'input' ||
       value.component === 'textarea' ||
-      value.component === 'select'
+      value.component === 'select' ||
+      value.component === 'checkbox'
     ) {
       blok_inputs.push(value)
     }

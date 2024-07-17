@@ -21,6 +21,7 @@ import Textarea from '../components/Textarea'
 import Video from '../components/Video'
 import Carousel from '../components/Carousel'
 import Select from '../components/Select'
+import Checkbox from '../components/Checkbox'
 
 const components = {
   container: Container,
@@ -45,6 +46,7 @@ const components = {
   video: Video,
   carousel: Carousel,
   select: Select,
+  checkbox: Checkbox,
 }
 
 storyblokInit({

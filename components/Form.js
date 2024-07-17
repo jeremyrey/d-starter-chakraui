@@ -25,6 +25,12 @@ const Form = ({ blok }) => {
       const jsonParams = propsToJson(blok_inputs[i].props)
       if (jsonParams.type == 'file') {
         file = inputs[i][1].files[0]
+      } else if (jsonParams.type == 'checkbox') {
+        message +=
+          jsonParams.name_text +
+          ' : ' +
+          (inputs[i][1].checked ? 'Oui' : 'Non') +
+          '<br>'
       } else {
         message += jsonParams.name_text + ' : ' + inputs[i][1].value + '<br>'
       }
