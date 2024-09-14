@@ -2,6 +2,6 @@
 echo "Upload des blocks"
 storyblok push-components --space $1 components.201927.json
 echo "Upload des pages"
-curl "https://mapi.storyblok.com/v1/spaces/276621/stories/" -X POST -H "Content-Type: application/json" -H "Authorization: dfXFbjQSjVWeg6cFphjRMwtt-133759-Pi795XW1CL77EYvQP5md" -d @../templates/starter/home.json
-curl "https://mapi.storyblok.com/v1/spaces/277904/stories/" -X POST -H "Content-Type: application/json" -H "Authorization: dfXFbjQSjVWeg6cFphjRMwtt-133759-Pi795XW1CL77EYvQP5md" -d @./templates/starter/cgu.json
-curl "https://mapi.storyblok.com/v1/spaces/276621/stories/" -X POST -H "Content-Type: application/json" -H "Authorization: dfXFbjQSjVWeg6cFphjRMwtt-133759-Pi795XW1CL77EYvQP5md" -d @../templates/starter/settings.json
+#curl "https://mapi.storyblok.com/v1/spaces/297437/stories/" -X POST -H "Content-Type: application/json" -H "Authorization: dfXFbjQSjVWeg6cFphjRMwtt-133759-Pi795XW1CL77EYvQP5md" -d @../templates/starter/home.json
+#curl "https://mapi.storyblok.com/v1/spaces/297437/stories/" -X POST -H "Content-Type: application/json" -H "Authorization: dfXFbjQSjVWeg6cFphjRMwtt-133759-Pi795XW1CL77EYvQP5md" -d @./templates/starter/cgu.json
+curl "https://mapi.storyblok.com/v1/spaces/297437/stories/" -X POST -H "Content-Type: application/json" -H "Authorization: dfXFbjQSjVWeg6cFphjRMwtt-133759-Pi795XW1CL77EYvQP5md" -d @../templates/starter/settings.json

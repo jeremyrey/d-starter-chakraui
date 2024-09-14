@@ -1,0 +1,4 @@
+#!/bin/bash
+echo "Début du téléchargement"
+curl "https://mapi.storyblok.com/v1/spaces/276621/stories/446443557" -X GET -H "Content-Type: application/json" -H "Authorization: dfXFbjQSjVWeg6cFphjRMwtt-133759-Pi795XW1CL77EYvQP5md"
+echo "Fin du téléchargement"
