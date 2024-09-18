@@ -15,7 +15,6 @@
     "@chakra-ui/react": "^2.3.6",
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
-    "@next/font": "^13.0.0",
     "@react-google-maps/api": "^2.18.1",
     "@sendgrid/mail": "^7.7.0",
     "@storyblok/react": "^1.0.8",

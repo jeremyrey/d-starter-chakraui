@@ -73,13 +73,14 @@ const Form = ({ blok }) => {
           h="100%"
           bg="hsl(0deg 0% 100% / 90%)"
           zIndex="2"
+          key="center_1234"
         >
           Votre message est envoyé
         </Center>
       )}
-      <form onSubmit={handleSubmit}>
-        {blok.content.map((blok) => (
-          <StoryblokComponent blok={blok} key={blok._uid} />
+      <form onSubmit={handleSubmit} key="form_1234">
+        {blok.content.map((_blok) => (
+          <StoryblokComponent blok={_blok} key={_blok._uid} />
         ))}
       </form>
     </Box>
