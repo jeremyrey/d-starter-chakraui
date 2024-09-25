@@ -23,6 +23,7 @@ import Carousel from '../components/Carousel'
 import Select from '../components/Select'
 import Checkbox from '../components/Checkbox'
 import Dropdown from '../components/Dropdown'
+import Accordeon from '../components/Accordeon'
 
 const components = {
   container: Container,
@@ -49,6 +50,7 @@ const components = {
   select: Select,
   checkbox: Checkbox,
   dropdown: Dropdown,
+  accordeon: Accordeon,
 }
 
 storyblokInit({
