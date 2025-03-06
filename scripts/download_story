@@ -1,4 +1,4 @@
 #!/bin/bash
 echo "Début du téléchargement"
-curl "https://mapi.storyblok.com/v1/spaces/$1/stories/$2" -X GET -H "Content-Type: application/json" -H "Authorization: dfXFbjQSjVWeg6cFphjRMwtt-133759-Pi795XW1CL77EYvQP5md"
+curl "https://mapi.storyblok.com/v1/spaces/$1/stories/$2" -X GET -H "Content-Type: application/json" -H "Authorization: kvRrdZNoUdl5jRPrpyHaRwtt-133759-kyvE4t-8y-t3LzFzXm_f"
 echo "Fin du téléchargement"
