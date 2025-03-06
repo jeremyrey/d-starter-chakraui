@@ -30,9 +30,9 @@ const DrawerBlock = ({ blok }) => {
       >
         <DrawerOverlay />
         <DrawerContent>
-          <DrawerCloseButton />
+          <DrawerCloseButton {...jsonParams.close_button} />
 
-          <DrawerBody>
+          <DrawerBody p="0">
             <StoryblokComponent blok={blok.menu[0]} key={blok.menu[0]._uid} />
           </DrawerBody>
         </DrawerContent>
