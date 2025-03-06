@@ -6,7 +6,9 @@ const Icon = ({ blok }) => {
   const jsonParams = propsToJson(blok.props)
 
   return React.createElement(
-    getIconsSetByProvider((blok.provider ||= 'chakra'))[blok.name],
+    getIconsSetByProvider((blok.provider ||= 'chakra'))[
+      (blok.name ||= 'email')
+    ],
     {
       ...jsonParams,
     }
