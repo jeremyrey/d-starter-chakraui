@@ -6,7 +6,11 @@ const Video = ({ blok }) => {
 
   return (
     <AspectRatio ratio={9 / 6} {...jsonParams}>
-      <iframe src={blok.src.cached_url} allowFullScreen />
+      <iframe
+        src={blok.src.cached_url}
+        allowFullScreen
+        title={jsonParams.title}
+      />
     </AspectRatio>
   )
 }
