@@ -2,8 +2,8 @@
 echo "Upload des blocks"
 storyblok push-components --space $1 components.201927.json
 echo "Upload des pages"
-curl "https://mapi.storyblok.com/v1/spaces/$1/stories/" -X POST -H "Content-Type: application/json" -H "Authorization: kvRrdZNoUdl5jRPrpyHaRwtt-133759-kyvE4t-8y-t3LzFzXm_f" -d @./templates/starter/liberal/home.json
-curl "https://mapi.storyblok.com/v1/spaces/$1/stories/" -X POST -H "Content-Type: application/json" -H "Authorization: kvRrdZNoUdl5jRPrpyHaRwtt-133759-kyvE4t-8y-t3LzFzXm_f" -d @./templates/starter/liberal/cgu.json
-curl "https://mapi.storyblok.com/v1/spaces/$1/stories/" -X POST -H "Content-Type: application/json" -H "Authorization: kvRrdZNoUdl5jRPrpyHaRwtt-133759-kyvE4t-8y-t3LzFzXm_f" -d @./templates/starter/liberal/settings.json
+curl "https://mapi.storyblok.com/v1/spaces/$1/stories/" -X POST -H "Content-Type: application/json" -H "Authorization: kvRrdZNoUdl5jRPrpyHaRwtt-133759-kyvE4t-8y-t3LzFzXm_f" -d @./templates/starter-tech/liberal/home.json
+curl "https://mapi.storyblok.com/v1/spaces/$1/stories/" -X POST -H "Content-Type: application/json" -H "Authorization: kvRrdZNoUdl5jRPrpyHaRwtt-133759-kyvE4t-8y-t3LzFzXm_f" -d @./templates/starter-tech/liberal/cgu.json
+curl "https://mapi.storyblok.com/v1/spaces/$1/stories/" -X POST -H "Content-Type: application/json" -H "Authorization: kvRrdZNoUdl5jRPrpyHaRwtt-133759-kyvE4t-8y-t3LzFzXm_f" -d @./templates/starter-tech/liberal/settings.json
 
 

@@ -1,0 +1,96 @@
+{
+  "story":{
+    "name":"Settings",
+    "parent_id":null,
+    "group_id":"560b5638-a468-4877-80d9-8ab7f6deb166",
+    "alternates":[
+
+    ],
+    "created_at":"2024-02-20T08:58:38.479Z",
+    "deleted_at":null,
+    "sort_by_date":null,
+    "tag_list":[
+
+    ],
+    "updated_at":"2024-02-29T08:38:33.193Z",
+    "published_at":"2024-02-29T08:38:33.177Z",
+    "id":446443557,
+    "uuid":"ca681ac0-4ffe-421a-a087-39835db4cb6a",
+    "is_folder":false,
+    "content":{
+      "_uid":"37913253-fa66-4d47-b731-8719b20e8599",
+      "favicon":{
+        "id":14391552,
+        "alt":"",
+        "name":"",
+        "focus":"",
+        "title":"",
+        "source":"",
+        "filename":"https://a.storyblok.com/f/276621/x/a33b61014b/favicon.ico",
+        "copyright":"",
+        "fieldtype":"asset",
+        "meta_data":{
+
+        },
+        "is_private":false,
+        "is_external_url":false
+      },
+      "component":"settings",
+      "theme_config":"{\n  \"font\": \"@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000\u0026display=swap');\",\n  \"fonts\": {\n    \"heading\": \"Roboto\",\n    \"body\": \"Roboto\"\n  },\n\"styles\": {\n    \"global\": {\n     \"html, body\":{\n        \"fontSize\":{\"base\":\"16px\",\"md\":\"18px\"}\n      },\n      \"a\": {\n        \"textDecoration\": \"none !important\"\n      }\n    }\n  },\n  \"colors\": {\n    \"black\": \"#000\",\n    \"white\": \"#FFF\",\n    \"main\":\"#0C2659\",\n\"secondary\":\"#ED6808\"\n  },\n  \"components\": {\n    \"Button\": {\n      \"baseStyle\": {\n        \"fontWeight\": \"500\",\n        \"fontSize\": \"16px\",\n        \"borderRadius\": \"25rem\",\n        \"px\": \"10px\"\n      },\n      \"variants\": {\n        \"main\": {\n          \"bg\":\"secondary\",\n          \"color\":\"white\"\n        },\n       \"white\":{\n         \"bg\": \"white\",\n         \"color\":\"main\"\n       },\n       \"dark\":{\n         \"bg\": \"#1E1E1E\",\n         \"color\":\"white\"\n       },\n       \"bordered\":{\n          \"bg\":\"transparent\",\n          \"border\": \"1px solid #0C2659\"\n      }\n      },\n      \"sizes\": {\n        \"xl\": {\n          \"fontSize\": \"26px\"\n        },\n        \"md\": {\n          \"fontSize\": \"14px\"\n        },\n        \"lg\": {\n          \"fontSize\": \"15px\"\n        },\n        \"sm\": {\n          \"fontSize\": \"12px\"\n        }\n      }\n    }\n  }\n}\n"
+    },
+    "published":true,
+    "slug":"settings",
+    "path":null,
+    "full_slug":"settings",
+    "default_root":null,
+    "disble_fe_editor":false,
+    "parent":null,
+    "is_startpage":false,
+    "unpublished_changes":false,
+    "meta_data":null,
+    "imported_at":null,
+    "preview_token":{
+      "token":"64dd7ad5bbda8d6b53aa8472f56b91319aef25af",
+      "timestamp":"1726308261"
+    },
+    "pinned":false,
+    "breadcrumbs":[
+
+    ],
+    "publish_at":null,
+    "expire_at":null,
+    "first_published_at":"2024-02-20T12:54:32.761Z",
+    "last_author":{
+      "id":133759,
+      "userid":"rey.jeremy@hotmail.fr",
+      "friendly_name":"Jeremy Rey"
+    },
+    "last_author_id":133759,
+    "user_ids":[
+
+    ],
+    "space_role_ids":[
+
+    ],
+    "translated_slugs":[
+
+    ],
+    "localized_paths":[
+
+    ],
+    "position":-10,
+    "translated_stories":[
+
+    ],
+    "can_not_view":false,
+    "is_scheduled":null,
+    "scheduled_dates":null,
+    "ideas":[
+
+    ],
+    "stage":null,
+    "favourite_for_user_ids":[
+
+    ]
+  }
+}
