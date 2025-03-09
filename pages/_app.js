@@ -24,6 +24,10 @@ import Select from '../components/Select'
 import Checkbox from '../components/Checkbox'
 import Dropdown from '../components/Dropdown'
 import Accordeon from '../components/Accordeon'
+import Content from '../components/blog/Content'
+import Title from '../components/blog/Title'
+import List from '../components/blog/List'
+import Excerpt from '../components/blog/Excerpt'
 
 const components = {
   container: Container,
@@ -51,6 +55,10 @@ const components = {
   checkbox: Checkbox,
   dropdown: Dropdown,
   accordeon: Accordeon,
+  blogTitle: Title,
+  blogContent: Content,
+  blogList: List,
+  blogExcerpt: Excerpt,
 }
 
 storyblokInit({
