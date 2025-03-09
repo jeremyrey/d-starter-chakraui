@@ -61,10 +61,17 @@ export async function getStaticProps(context) {
     // Note - error messages will vary depending on browser
   }
 
-  const posts_data = await fetch(
+  /*const posts_data = await fetch(
     `http://localhost:8888/wordpress/wp-json/wp/v2/posts?slug=${context.params.slug}`
   )
-  const posts = await posts_data.json()
+  const posts = await posts_data.json()*/
+  const posts = [
+    {
+      seo_title: 'SEO title',
+      seo_description: 'SEO description',
+      slug: 'post',
+    },
+  ]
   const post = posts[0]
 
   return {
@@ -79,10 +86,20 @@ export async function getStaticProps(context) {
 
 export async function getStaticPaths() {
   // Fetch all the slugs from WordPress
+  /*
   const posts_data = await fetch(
     `http://localhost:8888/wordpress/wp-json/wp/v2/posts?author=${process.env.NEXT_PUBLIC_BLOG_AUTHOR_ID}`
   )
-  const posts = await posts_data.json()
+    const posts = await posts_data.json()
+    */
+
+  const posts = [
+    {
+      seo_title: 'SEO title',
+      seo_description: 'SEO description',
+      slug: 'post',
+    },
+  ]
 
   // Create a path for each WordPress post
   const paths = posts.map((post) => ({
