@@ -25,6 +25,9 @@ const Meta = ({
       <link rel="icon" type="image/png" href={favicon} />
       <meta charSet="utf-8"></meta>
       <title>{title}</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link href="https://i.ytimg.com" rel="preconnect" />
     </Head>
   )
 }

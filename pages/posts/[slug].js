@@ -21,7 +21,6 @@ export default function DynamicPage({ story, post, settings }) {
 
   return (
     <ChakraProvider theme={themeConfig}>
-      <Fonts link={themeConfig.font} />
       <Meta
         title={post.seo_title}
         keywords={''}
@@ -36,6 +35,7 @@ export default function DynamicPage({ story, post, settings }) {
       </BlogContext.Provider>
       <CookieConsent />
       <GoogleScripts />
+      <Fonts link={themeConfig.font} />
     </ChakraProvider>
   )
 }

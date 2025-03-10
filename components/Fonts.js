@@ -1,7 +1,3 @@
-import { Global } from '@emotion/react'
-
-const Fonts = ({ link }) => {
-  return <Global styles={link} />
-}
+const Fonts = ({ link }) => <link rel="stylesheet" href={link} />
 
 export default Fonts

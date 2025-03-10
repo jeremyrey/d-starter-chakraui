@@ -20,7 +20,6 @@ export default function Index({ story, settings }) {
 
   return (
     <ChakraProvider theme={themeConfig}>
-      <Fonts link={themeConfig.font} />
       <Meta
         title={story.content.title}
         keywords={story.content.keywords}
@@ -33,6 +32,7 @@ export default function Index({ story, settings }) {
       <StoryblokComponent blok={story.content} />
       <CookieConsent />
       <GoogleScripts />
+      <Fonts link={themeConfig.font} />
     </ChakraProvider>
   )
 }
