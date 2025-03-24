@@ -68,7 +68,21 @@ storyblokInit({
 })
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return (
+    <>
+      <style jsx>{`
+        @keyframes infiniteScroll {
+          from {
+            transform: translateX(0);
+          }
+          to {
+            transform: translateX(calc(0px - 100% - 100px));
+          }
+        }
+      `}</style>
+      <Component {...pageProps} />
+    </>
+  )
 }
 
 export default MyApp
