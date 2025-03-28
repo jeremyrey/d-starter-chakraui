@@ -26,7 +26,11 @@ const Meta = ({
       <meta charSet="utf-8"></meta>
       <title>{title}</title>
       <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossOrigin="true"
+      />
       <link href="https://i.ytimg.com" rel="preconnect" />
     </Head>
   )
