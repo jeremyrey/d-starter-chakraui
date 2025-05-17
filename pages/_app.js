@@ -28,6 +28,7 @@ import Content from '../components/blog/Content'
 import Title from '../components/blog/Title'
 import List from '../components/blog/List'
 import Excerpt from '../components/blog/Excerpt'
+import Cover from '../components/blog/Cover'
 
 const components = {
   container: Container,
@@ -59,6 +60,7 @@ const components = {
   blogContent: Content,
   blogList: List,
   blogExcerpt: Excerpt,
+  blogCover: Cover,
 }
 
 storyblokInit({

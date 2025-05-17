@@ -8,8 +8,9 @@ import { ChakraProvider, extendTheme } from '@chakra-ui/react'
 import Fonts from '../../components/Fonts'
 import CookieConsent from '../../components/CookieConsent'
 import GoogleScripts from '../../components/GoogleScripts'
+import { BlogContext } from '../../contexts/index'
 
-export default function Index({ story, settings }) {
+export default function Index({ story, settings, posts }) {
   story = useStoryblokState(story, {
     customParent: process.env.NEXT_PUBLIC_HOST,
   })
@@ -29,7 +30,9 @@ export default function Index({ story, settings }) {
         ogUrl={story.content.ogUrl}
         favicon={settings.content.favicon.filename}
       />
-      <StoryblokComponent blok={story.content} />
+      <BlogContext.Provider value={posts}>
+        <StoryblokComponent blok={story.content} />
+      </BlogContext.Provider>
       <CookieConsent />
       <GoogleScripts />
       <Fonts link={themeConfig.font} />
@@ -48,20 +51,24 @@ export async function getStaticProps(context) {
 
   let story = false
   let settings = false
+  let posts = []
 
   try {
     story = data.stories.filter((truc) => truc.slug != 'settings')[0]
     settings = data.stories.filter((truc) => truc.slug == 'settings')[0]
+    const posts_data = await fetch(
+      `${process.env.BLOG_URL}/wp-json/wp/v2/posts?author=${process.env.BLOG_AUTHOR_ID}`
+    )
+    posts = await posts_data.json()
   } catch (error) {
-    //console.error(error);
-    // expected output: ReferenceError: nonExistentFunction is not defined
-    // Note - error messages will vary depending on browser
+    //console.error(error)
   }
 
   return {
     props: {
       story: typeof story != 'undefined' ? story : false,
       key: typeof story != 'undefined' ? story.id : false,
+      posts: posts,
       settings: settings,
     },
   }

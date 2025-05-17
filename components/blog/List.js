@@ -1,21 +1,24 @@
 import { StoryblokComponent, storyblokEditable } from '@storyblok/react'
 import { Box, Link } from '@chakra-ui/react'
 import propsToJson from '../../hooks/propsToJson'
-import example_post from '../../templates/post.json'
+import { useContext } from 'react'
+import { BlogContext } from '../../contexts/index'
 
 const List = ({ blok }) => {
   const jsonParams = propsToJson(blok.props)
-  const posts = example_post
+  const posts = useContext(BlogContext)
 
   return (
     <Box {...jsonParams.wrapper}>
       {posts.map((post) => (
-        <Box {...storyblokEditable(blok)} key={post.id} {...jsonParams.post}>
+        <Box {...storyblokEditable(blok)} key={post.slug} {...jsonParams.post}>
           {blok.content.map((blok) => (
-            <StoryblokComponent blok={blok} key={blok._uid} />
+            <BlogContext.Provider value={post} key={blok._uid}>
+              <StoryblokComponent blok={blok} />
+            </BlogContext.Provider>
           ))}
           <Box mt="10px" {...jsonParams.link}>
-            <Link href={`/blog/${post.slug}`}>Lire l`&apos;article</Link>
+            <Link href={`/posts/${post.slug}`}>Lire l&apos;article</Link>
           </Box>
         </Box>
       ))}
