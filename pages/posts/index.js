@@ -41,6 +41,8 @@ export default function Index({ story, settings, posts }) {
 }
 
 export async function getStaticProps(context) {
+  if (process.env.BLOG_URL == undefined) return { props: {} }
+
   let params = {
     by_slugs: 'posts/index,' + 'settings',
     version: 'draft',

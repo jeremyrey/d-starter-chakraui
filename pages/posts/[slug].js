@@ -290,6 +290,7 @@ export default function DynamicPage({ story, post, settings }) {
 }
 
 export async function getStaticProps(context) {
+  if (process.env.BLOG_URL == undefined) return
   let params = {
     by_slugs: 'posts/post,' + 'settings',
     version: 'draft',
@@ -325,6 +326,7 @@ export async function getStaticProps(context) {
 }
 
 export async function getStaticPaths() {
+  if (process.env.BLOG_URL == undefined) return { paths: [], fallback: false }
   // Fetch all the slugs from WordPress
   const posts_data = await fetch(
     `${process.env.BLOG_URL}/wp-json/wp/v2/posts?author=${process.env.BLOG_AUTHOR_ID}`
