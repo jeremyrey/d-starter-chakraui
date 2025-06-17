@@ -38,5 +38,4 @@ yarn-error.log*
 public/sitemap*
 
 # Storyblok
-components*.json
 presets*
