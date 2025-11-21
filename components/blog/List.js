@@ -18,7 +18,7 @@ const List = ({ blok }) => {
             </BlogContext.Provider>
           ))}
           <Box mt="10px" {...jsonParams.link}>
-            <Link href={`/posts/${post.slug}`}>Lire l&apos;article</Link>
+            <Link href={`/posts/${post.slug}`}>Read more</Link>
           </Box>
         </Box>
       ))}
