@@ -9,8 +9,10 @@ const Excerpt = ({ blok }) => {
   const jsonParams = propsToJson(blok.props)
   const post = useContext(BlogContext)
   const content = post
-    ? post.excerpt.rendered
-    : example_post[0].excerpt.rendered
+    ? post.excerpt.rendered.substring(0, 300) + '...'
+    : example_post[0].excerpt.rendered.substring(0, 300) + '...'
+
+  console.log('Rendering Excerpt for post:', content)
 
   return (
     <B
